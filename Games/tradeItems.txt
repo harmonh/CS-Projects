@@ -1,0 +1,6 @@
+Lightsaber 70
+Sandworm 100
+Fuel 15
+Droid 50
+Rope 5
+Tesseract 1000000
