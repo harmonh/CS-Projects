@@ -1,0 +1,235 @@
+body {
+  background-color: #f6efce;
+  color: #2f2c27; 
+  margin: 24px;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+  background: #49796b ;
+  height: 120px;
+  margin: 4px;
+  border-radius: 4px;
+
+}
+
+#header img {
+  float: left;
+  width: 200px;
+  height: 120px;
+}
+
+#header h1 {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  font-size: 300%;
+  font-family: sans-serif;
+}
+
+#subhead {
+  background: #2f2c27;
+  height: 30px;
+  margin: 4px;
+  border-radius: 4px;
+
+}
+
+#subhead a {
+  margin: 15px;
+  font-size: 80%;
+  line-height: 30px;
+  vertical-align: middle;
+  color: #f6efce;
+  text-decoration: none;
+}
+
+#subhead a:hover {
+  color: #49796b;
+  text-decoration: none;
+}
+
+#main {
+    padding: 10px;
+    margin: 0 210px;
+}
+
+li a {
+  color: #f6efce;
+  text-decoration: none;
+}
+
+a {
+  color: #49796b;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: #2f2c27;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #2f2c27;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+table {
+  font: 100% sans-serif;
+  color: #2f2c27;
+  empty-cells: show;
+  border: 2px solid #2f2c27;
+  table-layout: fixed;
+}
+
+/* header */
+table thead {
+  text-align: center;
+}
+
+/* basic shared rules */
+table tbody {
+  text-align: left;
+  padding-right: .1em;
+}
+
+table th {
+  font-weight: bold;
+  padding:.5em .5em .5em 3em;
+  border: 2px solid #2f2c27;
+  width: 400px;
+  text-align: center;
+}
+
+/* body */
+table td {
+  padding:.5em .5em .5em 3em;
+  border: 2px solid #2f2c27;
+  text-align: left;
+}
+
+.diag {
+  background-color: #0A0A0A;
+}
+
+
+/*form validation*/
+form.cmxform {
+  font-size: 1.0em;
+  color: #333;
+}
+
+form.cmxform legend {
+  padding-left: 0;
+}
+
+form.cmxform legend, form.cmxform label {
+  color: #333;
+}
+
+form.cmxform fieldset {
+  border: none;
+  border-top: 1px solid #C9DCA6;
+  background: url(cmxform-fieldset.gif) left bottom repeat-x;
+  background-color: #F8FDEF;
+}
+
+form.cmxform fieldset fieldset {
+  background: none;
+}
+
+form.cmxform fieldset p, form.cmxform fieldset fieldset {
+  padding: 5px 10px 7px;
+  background: url(cmxform-divider.gif) left bottom repeat-x;
+}
+
+form.cmxform label.error, label.error {
+  /* remove the next line when you have trouble in IE6 with labels in list */
+  color: red;
+  font-style: italic
+}
+div.error { display: none; }
+input { border: 1px solid black; }
+input.checkbox { border: none }
+input:focus { border: 1px dotted black; }
+input.error { border: 1px dotted red; }
+form.cmxform .gray * { color: gray; }
+
+.logbutton {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #49796b), color-stop(1, #49796b) );
+  background:-moz-linear-gradient( center top, #49796b 5%, #49796b 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#49796b', endColorstr='#49796b');
+  background-color:#49796b;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0;
+  border:1px solid #49796b;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:32px;
+  line-height:32px;
+  width:126px;
+  text-decoration:none;
+  text-align:center;
+}
+.logbutton:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #49796b), color-stop(1, #49796b) );
+  background:-moz-linear-gradient( center top, #49796b 5%, #49796b 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#49796b', endColorstr='#49796b');
+  background-color:#49796b;
+}
+.logbutton:active {
+  position:relative;
+  top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+#sidebar {
+    background-color: #7a7a7a;
+    color: #ffffff;
+    padding: 10px;
+    width: 220px;
+    bottom: 0;
+    top: 180px;
+    right: 0;
+    position: absolute;
+    border-radius: 4px;
+    margin: 24px;
+}
+
+#sidebar h3 {
+  text-align: center;
+}
+
+#sidebar li {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#footer {
+   position: absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   text-align: center;
+}
