@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CS 496 Assignment 2</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1>CS 496 Assignment 2 | Holly Harmon</h1>
+      </a>
+    </header>
+    {% for entry in entries %}
+      <p>Bike: {{ entry.bike_type }}</p>
+      <p>Time: {{ entry.time }}</p>
+
+    {% endfor %}
+    <div id="wrapper">
+    <form action="/" method="post">
+      <input type="submit" value="Add New">
+    </form>
+
+      <footer>
+
+      </footer>
+    </div>
+  </body>
+</html>

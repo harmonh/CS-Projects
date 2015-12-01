@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CS 496 Assignment 2</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1>CS496 Assignment 2: Dynamic Pages | Holly Harmon</h1>
+      </a>
+    </header>
+    <form action="/" method="post">
+      <fieldset>
+        <legend>New Entry</legend>
+        <input type="hidden" name ="action" value="new_entry">
+        <input type="radio" name="bike" value="Road" checked> Road Bike
+        <br>
+        <input type="radio" name="bike" value="Stationary"> Stationary Bike
+        <br><br>
+        <label>Date: </label><input type="date" name="date"><br><br>
+        <label>Minutes: </label><input type="text" name="time">
+        <br><br>
+        <label>Distance: </label><input type="text" name="distance">
+        <input type="checkbox" name="kilos"><label> ki </label><br><br>
+        <label>Level: </label>
+        <select name="level">
+          <option value="N/A">None</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select><br><br>
+        <input type="submit" value="Add">
+      </fieldset>
+    </form>
+<div id="wrapper">
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Time (mins)</th>
+        <th>Distance</th>
+        <th>Bike</th>
+        <th>Level</th>
+        <th></th>
+      </tr>
+      {% for entry in entries %}
+      <tr>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.time }}</td>
+        <td>{{ entry.distance }}
+        {% if entry.kilos %}
+          ki
+        {% endif %}
+        {% if not entry.kilos %}
+          mi
+        {% endif %}</td>
+        <td>{{ entry.bike_type }}</td>
+        <td>{{ entry.level }}</td>
+        <td><a href='/edit?key={{ entry.key.urlsafe() }}'>edit</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+      <footer>
+
+      </footer>
+    </div>
+  </body>
+</html>

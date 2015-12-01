@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HOLLY-LAPPY</Machine>
+    <WindowsUser>Holly</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>5909b978-5805-4b4e-8e47-d105988c841d</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\css\ui-themed.css">
+      <PackagePath>css\ui-themed.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\css\ui-themed.theme-dark.css">
+      <PackagePath>css\ui-themed.theme-dark.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\css\ui-themed.theme-light.css">
+      <PackagePath>css\ui-themed.theme-light.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\auth\auth.css">
+      <PackagePath>pages\auth\auth.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\edit\edit.css">
+      <PackagePath>pages\edit\edit.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\home\home.css">
+      <PackagePath>pages\home\home.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\addnew\addnew.css">
+      <PackagePath>pages\addnew\addnew.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\newuser\newuser.css">
+      <PackagePath>pages\newuser\newuser.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\view\view.css">
+      <PackagePath>pages\view\view.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\Icon-user.png">
+      <PackagePath>images\Icon-user.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\Square150x150Logo.scale-240.png">
+      <PackagePath>images\Square150x150Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\Square44x44Logo.scale-240.png">
+      <PackagePath>images\Square44x44Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\Wide310x150Logo.scale-240.png">
+      <PackagePath>images\Wide310x150Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\Square71x71Logo.scale-240.png">
+      <PackagePath>images\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\SplashScreen.scale-240.png">
+      <PackagePath>images\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\images\StoreLogo.scale-240.png">
+      <PackagePath>images\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\auth\auth.js">
+      <PackagePath>pages\auth\auth.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\edit\edit.js">
+      <PackagePath>pages\edit\edit.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\home\home.js">
+      <PackagePath>pages\home\home.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\addnew\addnew.js">
+      <PackagePath>pages\addnew\addnew.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\newuser\newuser.js">
+      <PackagePath>pages\newuser\newuser.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\view\view.js">
+      <PackagePath>pages\view\view.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\auth\auth.html">
+      <PackagePath>pages\auth\auth.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\edit\edit.html">
+      <PackagePath>pages\edit\edit.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\home\home.html">
+      <PackagePath>pages\home\home.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\default.html">
+      <PackagePath>default.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\addnew\addnew.html">
+      <PackagePath>pages\addnew\addnew.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\newuser\newuser.html">
+      <PackagePath>pages\newuser\newuser.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\newuser\newlog.html">
+      <PackagePath>pages\newuser\newlog.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\pages\view\view.html">
+      <PackagePath>pages\view\view.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Phone.WinJS.2.1\1.0\">
+      <Name>Microsoft.Phone.WinJS.2.1</Name>
+      <Version>1.0.9651.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.Phone.WinJS.2.1, MinVersion=1.0.9651.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Phone.WinJS.2.1\1.0\Microsoft.Phone.WinJS.2.1.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

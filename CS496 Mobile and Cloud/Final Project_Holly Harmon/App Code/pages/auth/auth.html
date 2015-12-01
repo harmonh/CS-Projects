@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.Phone.WinJS.2.1/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/auth/auth.css" rel="stylesheet" />
+    <script src="/pages/auth/auth.js"></script>
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment homepage">
+        <header aria-label="Header content" role="banner">
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome User!</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <!-- From HelloWorld -->
+            <img id="imageControl" />
+            <div id="output"></div>
+            <p>What would you like to do?</p>
+            <button id="viewButton" value="view">View Your Entries</button>
+            <br />
+            <button id="addButton" value="addnew">Add New Entry</button>
+            <button id="photoButton">Add/Update User Icon</button>
+            <p id="imageInformation"></p>
+            <button id="logOutButton">Logout</button>
+            <img id="imageControl1" />
+            <img id="imageControl2" />
+
+            <!-- hyperlink to view page
+            <p><a href="/pages/view/view.html">View Your Entries</a></p>
+            hyperlink to addnew page
+            <p><a href="/pages/addnew/addnew.html">Add New Entry</a></p>-->
+        </section>
+    </div>
+</body>
+</html>

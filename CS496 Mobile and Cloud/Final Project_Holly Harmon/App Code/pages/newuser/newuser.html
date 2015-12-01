@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>newuser</title>
+
+    <link href="newuser.css" rel="stylesheet" />
+    <script src="newuser.js"></script>
+</head>
+<body>
+    <div class="newuser fragment">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to newuser</span>
+            </h1>
+        </header>
+        <section id="main" class="page-section" aria-label="Main content" role="main">
+            <div id="nameDiv"></div>
+            <label>Username (required): </label><input type="text" id="name" />
+            <div id="passDiv"></div>
+            <label>Password (required): </label><input type="password" id="password" />
+            
+            <button id="newUserButton">Create Account</button>
+        </section>
+    </div>
+</body>
+</html>

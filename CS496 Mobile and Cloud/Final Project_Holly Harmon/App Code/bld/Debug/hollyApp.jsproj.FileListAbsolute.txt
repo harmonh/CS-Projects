@@ -1,0 +1,15 @@
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bin\Debug\ReverseMap\resources.pri
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bin\Debug\AppxManifest.xml
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bin\Debug\hollyApp.build.appxrecipe
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\priconfig.xml
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\priconfig.xml.intermediate
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\layout.resfiles
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\layout.resfiles.intermediate
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\resources.resfiles
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\resources.resfiles.intermediate
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\pri.resfiles
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\pri.resfiles.intermediate
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\qualifiers.txt
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Holly\Documents\Visual Studio 2013\Projects\HelloWorldWithPages\HelloWorldWithPages\bld\Debug\ProjectArchitectures.txt

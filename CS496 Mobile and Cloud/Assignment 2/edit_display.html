@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CS 496 Assignment 2</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1>CS496 Assignment 2: Dynamic Pages | Holly Harmon</h1>
+      </a>
+    </header>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Time (mins)</th>
+        <th>Distance</th>
+        <th>Bike</th>
+        <th>Level</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.time }}</td>
+        <td>{{ entry.distance }}
+        {% if entry.kilos %}
+          ki
+        {% endif %}
+        {% if not entry.kilos %}
+          mi
+        {% endif %}</td>
+        <td>{{ entry.bike_type }}</td>
+        <td>{{ entry.level }}</td>
+        <td><a href='/edit?key={{ entry.key.urlsafe() }}'>edit</a></td>
+      </tr>
+    </table>
+    <p><a href='/'>Done Editing<a></p>
+    <div id="wrapper">
+      <footer>
+
+      </footer>
+    </div>
+  </body>
+</html>

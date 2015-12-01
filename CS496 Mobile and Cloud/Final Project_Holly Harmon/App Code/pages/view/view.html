@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>view</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.Phone.WinJS.2.1/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <link href="view.css" rel="stylesheet" />
+    <script src="view.js"></script>
+</head>
+<body>
+    <div class="view fragment" style="overflow:scroll">
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">View Your Entries</span>
+            </h1>
+        </header>
+        <section class="page-section" aria-label="Main content" role="main">
+            <div id="output"></div>
+            <table id="viewTable">
+                <tr>
+                    <th style="width:60px; text-align:center">Date</th>
+                    <th style="width:60px; text-align:center">Time</th>
+                    <th style ="width:60px; text-align:center">Distance</thstyle>
+                    <th style="width:60px; text-align:center">Level</th>
+                    <th style="width:60px; text-align:center">Bike</th>
+                    <th style="width:60px; text-align:center"></th>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <button id="homeButton">Main Page</button>
+        </section>
+    </div>
+</body>
+</html>

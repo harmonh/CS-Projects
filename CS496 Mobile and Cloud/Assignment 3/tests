@@ -1,0 +1,213 @@
+**New User**
+curl --data "name=NewName" -H "Accept: application/json" http://api-holly.appspot.com/user
+Expected: no error
+{"age": null, "bikes": [], "runs": [], "key": 4878221707313152, "name": "NewName"}
+curl --data "name=NewName2&age=30" -H "Accept: application/json" http://api-holly.appspot.com/user
+Expected: no error
+{"age": 30, "bikes": [], "runs": [], "key": 6293031984562176, "name": "NewName2"}
+curl --data "name=NewName" -H "Accept: application/json" http://api-holly.appspot.com/user
+Expected: Return with no new user entity
+curl --data "name=NewName&age=30" -H "Accept: application/json" http://api-holly.appspot.com/user
+Expected: User name already exists
+
+**Display user**
+curl -H "Accept: application/json" http://api-holly.appspot.com/user
+expected: list all user keys
+{"user keys": [4878221707313152, 5071522616049664, 5096363633147904, 5153049148391424, 5629499534213120, 5634472569470976, 5639445604728832, 5644406560391168, 5649391675244544, 5654313976201216, 5659313586569216, 5664248772427776, 5672749318012928, 5676073085829120, 5700305828184064, 5707702298738688, 5710239819104256, 5715999101812736, 5722646637445120, 5732568548769792, 6293031984562176]}
+curl -H "Accept: application/json" http://api-holly.appspot.com/user/4878221707313152
+expected: user info
+{"age": null, "bikes": [], "runs": [], "key": 4878221707313152, "name": "NewName"}
+curl -H "Accept: application/json" http://api-holly.appspot.com/user/4878221707313199
+ecpected: User not found error
+curl -H "Accept: application/json" http://api-holly.appspot.com/user/nonsense
+exception: no such user or some system error
+404 Not Found
+The resource could not be found.
+
+**Delete User**
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user
+expected: error
+"Not Acceptable: Must include User ID for Delete"
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/4878221707313152
+expected: no error
+curl -H "Accept: application/json" http://api-holly.appspot.com/4878221707313152
+expected: User not found
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/4878221707313199
+expected: Error: User not found
+
+**Put/update entry - Bike**
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: no change to entry
+Got: "Error 411 (Length Required)!!1" Not sure what this means...
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/unknown
+expected: no entry error
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/bike/known
+expected: no user error
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/bike/unknown
+expected: no user error
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: date changed, no other changes
+{"distance": null, "level": null, "kilos": false, "bike_type": null, "key": 5169618595348480, "time": 300, "date": "01/01/2015"}
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/unknown
+expected: no entry error
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/bike/known
+expected: no user error
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/bike/unknown
+expected: no user error
+curl -X PUT --data "bike_type=newtype" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: bike_type changed, no other changes
+{"distance": null, "level": null, "kilos": false, "bike_type": "newtype", "key": 5169618595348480, "time": 300, "date": "01/01/2015"}
+curl -X PUT --data "distance=5" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: distance changed, no other changes
+{"distance": 5, "level": null, "kilos": false, "bike_type": "newtype", "key": 5169618595348480, "time": 300, "date": "01/01/2015"}
+curl -X PUT --data "distance=five" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: value error
+curl -X PUT --data "time=500" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: time changed, no other changes
+{"distance": 5, "level": null, "kilos": false, "bike_type": "newtype", "key": 5169618595348480, "time": 500, "date": "01/01/2015"}
+curl -X PUT --data "time=FiveHundred" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: value error
+curl -X PUT --data "kilos=true" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: kilos changed, no other changes
+{"distance": 5, "level": null, "kilos": true, "bike_type": "newtype", "key": 5169618595348480, "time": 500, "date": "01/01/2015"}
+curl -X PUT --data "kilos=blah" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: no changes
+curl -X PUT --data "level=10" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: level changed, no other changes
+{"distance": 5, "level": 10, "kilos": true, "bike_type": "newtype", "key": 5169618595348480, "time": 500, "date": "01/01/2015"}
+curl -X PUT --data "level=Ten" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: value error
+curl -X PUT --data "date=02/02/2020&bike_type=Road&level=10&distance=2&time=20&kilos=false" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: level changed, no other changes
+{"distance": 2, "level": 10, "kilos": true, "bike_type": "Road", "key": 5169618595348480, "time": 20, "date": "02/02/2020"}
+Result: Kilos still equals True. Realized I did not put in code to change kilos from True to False, only to change from default False to True.
+
+**Put/update entry - Run**
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: no change to entry
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/unknown
+expected: no entry error
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/run/known
+expected: no user error
+curl -X PUT -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/run/unknown
+expected: no user error
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: date changed, no other changes
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: no change to entry
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/unknown
+expected: no entry error
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/run/known
+expected: no user error
+curl -X PUT --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/run/unknown
+expected: no user error
+curl -X PUT --data "path=newpath" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: path changed, no other changes
+curl -X PUT --data "distance=5" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: distance changed, no other changes
+curl -X PUT --data "distance=five" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: value error
+curl -X PUT --data "time=500" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: time changed, no other changes
+curl -X PUT --data "time=FiveHundred" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: value error
+curl -X PUT --data "kilos=true" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: kilos changed, no other changes
+curl -X PUT --data "kilos=blah" -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: no changes
+curl -X PUT --data "date=02/02/2020&path=Trail&distance=2&time=20&kilos=false" -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: all changes made
+
+**Delete entry - Bike**
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/known
+expected: no error
+curl -H "Accept: application/json" http://api-holly.appspot.com/user/known
+expected: entry from above no longer in 'bikes'
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/bike/known
+expected: no user
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/known/bike/unknown
+expected: no entry for user
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/bike/unknown
+expected: no user
+
+**Delete entry - Run**
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/known
+expected: no error
+curl -H "Accept: application/json" http://api-holly.appspot.com/user/known
+expected: entry from above no longer in 'runs'
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/run/known
+expected: no user
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/known/run/unknown
+expected: no entry for user
+curl -X DELETE -H "Accept: application/json" http://api-holly.appspot.com/user/unknown/run/unknown
+expected: no user
+
+**New Bike**
+curl --data "date=01/01/2015&user=known" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: new entry, all blank accept date
+{"distance": null, "level": null, "kilos": false, "bike_type": null, "key": 5169618595348480, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=unknown" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: User not found error
+curl --data "date=01/01/2015" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: Invalid request, user id required
+curl --data "user=known" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: no date error
+Got: Debug warning, "BadValueError: Entity has uninitialized properties: date". Forgot return statement after date validation fails in entry.py. Fixed.
+curl --data "date=01/01/2015&user=known&distance=2" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": 2, "level": null, "kilos": false, "bike_type": null, "key": 5652786310021120, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&distance=Two" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: value error
+curl --data "date=01/01/2015&user=known&time=20" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": null, "level": null, "kilos": false, "bike_type": null, "key": 5119667588825088, "time": 20, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&time=Twenty" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: value error
+curl --data "date=01/01/2015&user=known&bike_type=newtype" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": null, "level": null, "kilos": false, "bike_type": "newtype", "key": 5118084088070144, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&level=20" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": null, "level": 20, "kilos": false, "bike_type": null, "key": 5687539843203072, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&level=Twenty" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: value error
+curl --data "date=01/01/2015&user=known&kilos=True" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": null, "level": null, "kilos": true, "bike_type": null, "key": 5124589889781760, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&kilos=true" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": null, "level": null, "kilos": true, "bike_type": null, "key": 6245567495667712, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&kilos=blah" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: kilos = false
+{"distance": null, "level": null, "kilos": false, "bike_type": null, "key": 4838192612114432, "time": null, "date": "01/01/2015"}
+curl --data "date=01/01/2015&user=known&kilos=True&distance=2&time=20&level=20&bike_type=Road" -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: 
+{"distance": 2, "level": 20, "kilos": true, "bike_type": "Road", "key": 4855880898052096, "time": 20, "date": "01/01/2015"}
+
+**Entry info - Bike**
+curl -H "Accept: application/json" http://api-holly.appspot.com/bike/4855880898052096
+Expected: entry info
+{"distance": 2, "level": 20, "kilos": true, "bike_type": "Road", "key": 4855880898052096, "time": 20, "date": "01/01/2015"}
+curl -H "Accept: application/json" http://api-holly.appspot.com/bike/unknown
+Expected: no such entry
+curl -H "Accept: application/json" http://api-holly.appspot.com/bike
+Expected: all entry keys
+{"bike entry keys:": [4838192612114432, 4855880898052096, 5066549580791808, 5069036098420736, 5076495651307520, 5109799364591616, 5113123132407808, 5118084088070144, 5119667588825088, 5124589889781760, 5137355874762752, 5144752345317376, 5157197281492992, 5159696684023808, 5167132077719552, 5169618595348480, 5631986051842048, 5648554290839552, 5652786310021120, 5668600916475904, 5681034041491456, 5682617542246400, 5687539843203072, 5692462144159744, 5720147234914304, 5730082031140864, 5739407210446848, 5741031244955648, 6194936005263360, 6197422522892288, 6239023039250432, 6245567495667712, 6263255781605376, 6278949055234048, 6283097188335616, 6285596590866432]}
+curl -H "Accept: application/json" http://api-holly.appspot.com/bike/nonsense
+Expected: error
+404 Not Found
+The resource could not be found.
+
+**Entry info - Run**
+curl -H "Accept: application/json" http://api-holly.appspot.com/run/known
+Expected: entry info
+{"distance": 2, "kilos": true, "key": 5649050225344512, "time": 20, "date": "01/01/2015", "path": "Trail"}
+curl -H "Accept: application/json" http://api-holly.appspot.com/run/unknown
+Expected: no such entry
+curl -H "Accept: application/json" http://api-holly.appspot.com/run
+Expected: all entry keys
+{"run entry keys:": [5649050225344512]}
+curl -H "Accept: application/json" http://api-holly.appspot.com/run/nonsense
+Expected: error
+404 Not Found
+The resource could not be found.

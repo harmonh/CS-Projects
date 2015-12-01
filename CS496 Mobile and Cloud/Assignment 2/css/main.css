@@ -1,0 +1,110 @@
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  margin: 0 0 1em 0;
+}
+
+table {
+  font: 100% sans-serif;
+  background-color: ;
+  color: #36544F;
+  empty-cells: show;
+  border: 1px solid #6A4A3C;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table th {
+  font-weight: bold;
+  padding:.5em .5em .5em .5em;
+  border: 1px solid #6A4A3C;
+  text-align: center;
+  width: 100px;
+}
+
+table td {
+  padding:.5em .5em .5em .5em;
+  border: 1px solid #6A4A3C;
+  text-align: center;
+}
+
+header {
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%;
+}
+
+#logo {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-family: sans-serif;
+  margin: 15px 0;
+  font-size: 1.75em;
+  font-weight: normal;
+  line-height: 0.8em;
+}
+
+h2 {
+  font-size: 0.75em;
+  margin: -5px 0 0;
+  font-weight: normal;
+}
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  color: #ccc;
+}
+
+body {
+  background-color: #fff;
+  color: #999;
+}
+
+/* green header */
+header {
+  background: #088da5;
+  border-color: #599a68;
+  border-bottom: 5px solid #0d6386;
+  margin-bottom: 60px;
+}
+
+/* logo text */
+h1, h2 {
+  color: #fff;
+}
+
+#logo {
+  float: left;
+  margin-left: 5%;
+  text-align: left;
+  width: 45%;
+}
+
+/* links */
+a {
+  color: #6ab47b;
+}
+
+/* nav link */
+nav a, nav a:visited {
+  color: #fff;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color: #32673f;
+}
+

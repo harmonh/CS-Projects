@@ -1,0 +1,21 @@
+# Overall app.yaml code and structure adapted from the Google App Engine
+# python tutorial: https://cloud.google.com/appengine/docs/python/gettingstartedpython27
+# and OSU CS 496 lecture "Routes" by Justin Wolford
+
+application: hellocloud-holly
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /.*
+  script: hellocloud.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
