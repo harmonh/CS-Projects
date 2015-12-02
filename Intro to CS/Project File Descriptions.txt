@@ -1,0 +1,96 @@
+| File               |  | Description                                                               |
+--------                 ---------------------------------------------------------------------------
+cerealbox.cpp			Converts ounces to metric tons.
+echo.cpp				Echoes the user's integer input back to them.
+helloworld.cpp			Outputs Hello World.
+maxoccupancy.cpp		Tells the user if the number of people in their event violates fire code max
+						occupancy.
+videogame_a.cpp			User inputs number of tickets, program uses division and remainders to return 
+						how many candy bars and gumballs user can get.
+videogame_b.cpp			User inputs number of game tickets, program uses while loops to return how many 
+						candy bars, gumballs, and remaining tickets user can get.
+exercise_3_getline.cpp	Uses getline to get a input string, prints string out one letter at a time 
+						forward and backwards. Counts/ouputs number of characters in string.
+exercise_3.cpp			Same as exercise_3_getline, but uses cin.
+pp3_1.cpp				User inputs liters of gas used and miles driven, program outputs mpg of user's 
+						vehicle.
+pp3_5.cpp				User inputs height, weight, age. Program outputs hat and jacket size and 
+						waistline.
+pp3_13.cpp				Randomly chooses 4 winners from 25 numbers.
+random_number.cpp		Generates and prints  10 random numbers. Uses rand and srand(time(0))
+exercise_4_1.cpp		Generates a random number given a max and min range.
+exercise_4_2.cpp		Accepts two strings and returns whether they contain the same content.
+name_program.cpp		User inputs first, last, middle name and program returns it in last name, first 
+						name Middle initial format.
+exercise_5_1.cpp		Function that generates a random number in user's range.
+exercise_5_2.cpp		Same as 4_2, but uses a function to compare the strings.
+pp13_1.cpp				Uses a recursive function to find Fibonacci number at n^th place.
+pp13_8.cpp				Using a recursive function, the program takes the user input and calculates the 
+						amount of money that will be in the savings account after the number of years 
+						input by the user.
+pp13_10.cpp				Program uses a recursive function that adds up the number of pins from row 1 to 
+						row n for the total number of bowling pins in a pyramid with a base row of n 
+						pins.
+pp4_17.cpp				The "sort()" function takes three arguments (a, b, and c) passed as references 
+						and reassigns the lowest value to a, the second lowest value to b, and the 
+						largest value to c.
+pp5_7.cpp				Uses an array to generate a histogram of student quiz scores. Counts/reports 
+						how many students scored a 0, 1, 2, 3, 4, or 5.
+pp5_9_oned.cpp			A program that runs a two player tic-tac-toe board using an array from 1 to 9 
+						set up as a 3x3 board.
+pp5_9_twod.cpp			Tic-tac-toe game using a two dimensional array to set up the 3x3 board.
+ex_6_1.cpp				Prints the sum of 5 int values input by user.
+ex_7_1.cpp				A program that calls a function that asks the user to input a value (integer) 
+						to be assigned to a variable by way of a pointer.
+7_1_command_line.cpp	Command line argument friendly version of ex_7_1.cpp
+ex_7_2.cpp				User enters numbers into a dynamic array and program prints highest and lowest 
+						value.
+tictac1d_dynamic.cpp	Version of pp5_9_oned.cpp utalizing a dynamic array.
+tictac2d_dynamic.cpp	Version of pp5_9_twod.cpp utalizing a dynamic array.
+pp6_1.cpp				Grading program that calculates a final letter grade based on differently 
+						weighted quiz and exam scores.
+pp6_1_command.cpp		Same as pp6_1.cpp, but scores entered on command line.
+ex8_1.cpp				Creation of a struct with member variables.
+unicorn_adventure.cpp	Text adventure game.
+ex10_3.cpp				Fills two 10x10 matrixes and multiplies them and stores the products in a third 
+						array.
+ex10_4.cpp				Finds the sum  of all the multiples of 3 or 5 under 1000.
+pp18_2.cpp				Calls a recursive function to a depth of 10. The user enters a depth to level 
+						to throw an exception back to the main function using try and throw.
+pp18_4.cpp				Two arrays hold product names and corresponding ID numbers. User can enter a 
+						product and get its ID.
+pp11.1					Creation of own namespace.
+pp8_2.cpp				Has a class for rational number and allows for overloaded operators to deal 
+						with objects of the Rational class.
+pp8_7.cpp				Defines a class that stores a prime number. Overloads the ++ prefix to return 
+						the next highest prime number.
+ex12_1.cpp				Contains a class for consignment inventory items and constructors that create 
+						instances of items.
+ex12_2.cpp				Contains a vector that keeps trtack of visitors checking in and out of a 
+						building.
+ex12_3.cpp				Uses a vector to figure out where a 'suitor' should stand in line to not get 
+						eliminated by a 'princess'
+pp12_3a.cpp				Creates a .txt file with numbers in it and calculates the median number from 
+						the file.
+pp12_3b.cpp				Creates a .txt file with numbers in it and calculates the quartiles from the 
+						numbers in the file.
+pp12_6.cpp				Creates two .txt files with integer values in sorted order, then copies those 
+						file numbers to a third file, still in sorted order.
+pp12_25.cpp				Reads in a user integer as a string and converts it to int using stringstream
+pp14_1.cpp				Employee and administrator classes that track employee info and allows admin to 
+						access it and print checks.
+pp14_9.cpp				Classes for a RPG: Base class is Creature which has derived classes for Human, 
+						Elf and Demon, while Demon has derived classes for Cyberdemon and Balrog.
+pp16_3.cpp				Allows a sortable value to be inserted into a vector, then resorts the vector 
+						with the added value.
+iterate_binary.cpp		Searches an array for a value using iteration and returns item's location.
+recursive_binary.cpp	Searches an array for a value using recursion and returns item's location.
+nodes.cpp				Uses linked list nodes to navigate though a maze.
+project_one.cpp			Player one inputs a number and player two guesses which number with hints and 
+						limited turns.
+projecttwo_final.cpp	A two player game of hangman.
+project3.cpp			Two player game guessing a phrase, like wheel of fortune + project 2.
+project4.cpp			Program that allows user to play the games from the 3 previous projects.
+gameoflife.cpp			Project 5: The Game of Life
+Final Project			Space text adventure that demonstrates practical use of many of the concepts 
+						used throughout the term.
